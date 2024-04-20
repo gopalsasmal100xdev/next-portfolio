@@ -1,7 +1,7 @@
 import { FaLinkedinIn } from "react-icons/fa";
 
-export const NAME = "GOPAL SASMAL"
-export const name = "Gopal Sasmal"
+export const NAME = "GOPAL SASMAL";
+export const name = "Gopal Sasmal";
 
 export const Skill_data = [
   {
@@ -267,11 +267,185 @@ export const Short_desc =
 
 export const Resume_url = "https://flowcv.com/resume/4upc6r21k2";
 
-export const title = "Fullstack Developer"
+export const title = "Fullstack Developer";
 
 export const titles = [
   "Frontend Development",
   "Backend Development",
   "MERN Stack Development",
-  "Open Source Contribution"
+  "Open Source Contribution",
 ];
+
+export interface Skill {
+  id: number;
+  title: string;
+  url: string;
+}
+export const skills = {
+  frontend: [
+    {
+      id: 1,
+      title: "HTML5",
+      url: "/skills/icons8-html.svg",
+    },
+    {
+      id: 2,
+      title: "CSS",
+      url: "/skills/icons8-css.svg",
+    },
+    {
+      id: 3,
+      title: "JavaScript",
+      url: "/skills/icons8-javascript.svg",
+    },
+    {
+      id: 4,
+      title: "TypeScript",
+      url: "/skills/icons8-typescript.svg",
+    },
+    {
+      id: 5,
+      title: "ReactJS",
+      url: "/skills/icons8-react-js.svg",
+    },
+    {
+      id: 6,
+      title: "NextJS",
+      url: "/skills/icons8-next.svg",
+    },
+    {
+      id: 7,
+      title: "Redux",
+      url: "/skills/redux.png",
+    },
+    {
+      id: 8,
+      title: "Tailwind",
+      url: "/skills/tailwindcss.png",
+    },
+    {
+      id: 9,
+      title: "Material UI",
+      url: "/skills/material-ui.png",
+    },
+    {
+      id: 10,
+      title: "Chakra UI",
+      url: "/skills/chakra-ui.png",
+    },
+    {
+      id: 11,
+      title: "Bootstrap",
+      url: "/skills/bootstrap.png",
+    },
+    {
+      id: 12,
+      title: "jQuery",
+      url: "/skills/jquery.png",
+    },
+  ],
+  backend: [
+    {
+      id: 1,
+      title: "NodeJS",
+      url: "/skills/icons8-node-js.svg",
+    },
+    {
+      id: 2,
+      title: "Express",
+      url: "/skills/express-js.png",
+    },
+    {
+      id: 3,
+      title: "MongoDB",
+      url: "/skills/mongodb.png",
+    },
+    {
+      id: 4,
+      title: "Firebase",
+      url: "/skills/firebase.png",
+    },
+    {
+      id: 5,
+      title: "MySQL",
+      url: "/skills/mysql-logo.png",
+    },
+    {
+      id: 10,
+      title: "Postgresql",
+      url: "/skills/icons8-postgresql.svg",
+    },
+    {
+      id: 6,
+      title: "Prisma",
+      url: "/skills/icons8-prisma-orm.svg",
+    },
+    {
+      id: 7,
+      title: "Redis",
+      url: "/skills/icons8-redis.svg",
+    },
+    {
+      id: 8,
+      title: "AWS",
+      url: "/skills/icons8-amazon-aws.png",
+    },
+    {
+      id: 9,
+      title: "Docker",
+      url: "/skills/docker.png",
+    },
+  ],
+  other: [
+    {
+      id: 2,
+      title: "Java",
+      url: "/skills/java.png",
+    },
+    {
+      id: 10,
+      title: "C++",
+      url: "/skills/cpp.png",
+    },
+    {
+      id: 3,
+      title: "Git",
+      url: "/skills/git.png",
+    },
+    {
+      id: 4,
+      title: "Github",
+      url: "/skills/github.png",
+    },
+    {
+      id: 6,
+      title: "Postman",
+      url: "/skills/postman.png",
+    },
+    {
+      id: 8,
+      title: "Thunder Client",
+      url: "/skills/thunderclient.png",
+    },
+    {
+      id: 7,
+      title: "Netlify",
+      url: "/skills/netlify.png",
+    },
+    {
+      id: 5,
+      title: "Vercel",
+      url: "/skills/vercel.svg",
+    },
+    {
+      id: 9,
+      title: "Chat GPT",
+      url: "/skills/icons8-chat-gpt.svg",
+    },
+    {
+      id: 1,
+      title: "Googling",
+      url: "/skills/google-logo.png",
+    },
+  ],
+};

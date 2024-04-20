@@ -1,95 +1,48 @@
-import {
-  Backend_skill,
-  Frontend_skill,
-  Full_stack,
-  Other_skill,
-  Skill_data,
-} from "@/constants";
-import React from "react";
-import SkillDataProvider from "../sub/SkillDataProvider";
-import SkillText from "../sub/SkillText";
+"use client";
 
-const Skills = () => {
+import { useState } from "react";
+import SectionWrapper from "../sub/SectionWrapper";
+import { Skill, skills } from "@/constants";
+import SkillCard from "./SkillCard";
+
+export default function Skills() {
+  const [category, setCategory] = useState<Skill[]>(skills["frontend"]);
+  const [active, setActive] = useState<string>("frontend");
   return (
-    <section
+    <SectionWrapper
       id="skills"
-      className="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden pb-80 py-20"
-      style={{ transform: "scale(0.9" }}
-    >
-      <SkillText />
+      className="min-h-screen mt-12 md:mt-0 mx-4 md:mx-0 xl:my-20 2xl:my-0">
+      <h2 className="text-4xl text-white font-bold text-center">Tech Stack</h2>
 
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {Skill_data.map((image, index) => (
-          <SkillDataProvider
-            key={index}
-            src={image.Image}
-            width={image.width}
-            height={image.height}
-            index={index}
-          />
-        ))}
-      </div>
-
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {Frontend_skill.map((image, index) => (
-          <SkillDataProvider
-            key={index}
-            src={image.Image}
-            width={image.width}
-            height={image.height}
-            index={index}
-          />
-        ))}
-      </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {Backend_skill.map((image, index) => (
-          <SkillDataProvider
-            key={index}
-            src={image.Image}
-            width={image.width}
-            height={image.height}
-            index={index}
-          />
-        ))}
-      </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {Full_stack.map((image, index) => (
-          <SkillDataProvider
-            key={index}
-            src={image.Image}
-            width={image.width}
-            height={image.height}
-            index={index}
-          />
-        ))}
-      </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {Other_skill.map((image, index) => (
-          <SkillDataProvider
-            key={index}
-            src={image.Image}
-            width={image.width}
-            height={image.height}
-            index={index}
-          />
-        ))}
+      <div className="md:w-1/2 overflow-x-auto scroll-hide lg:w-1/3 mx-auto mt-6 bg-white dark:bg-grey-800 p-2 flex justify-between items-center gap-3 rounded-md">
+        {Object.keys(skills).map((x: string, index: number) => {
+          return (
+            <span
+              key={index}
+              onClick={() => {
+                setActive(x);
+                //@ts-ignore
+                setCategory(skills[x]);
+              }}
+              className={`p-1.5 md:p-2 text-sm md:text-base w-full text-center cursor-pointer rounded-md ${
+                x === active
+                  ? "bg-violet-600 dark:bg-violet-600 text-white"
+                  : "bg-white dark:bg-grey-800 hover:bg-gray-100 hover:dark:bg-grey-900"
+              } transition-all capitalize`}>
+              {x}
+            </span>
+          );
+        })}
       </div>
 
-      <div className="w-full h-full absolute">
-        <div className="w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover">
-          <video
-            className="w-full h-auto"
-            preload="false"
-            playsInline
-            loop
-            muted
-            autoPlay
-            src="/cards-video.webm"
-          />
-        </div>
+      <div className="lg:w-3/4 2xl:w-3/5 my-8 mx-auto md:px-12 grid grid-cols-3 md:grid-cols-4 xl:grid-cols-5 place-items-center gap-8">
+        {/* {skillData.filter((s: skill) => s.category.toLowerCase() === category.toLowerCase()).map((s: any, i: number) => (
+                    <SkillCard key={i} {...s} />
+                ))} */}
+        {category.map((skill, index) => (
+          <SkillCard key={index} skill={skill} />
+        ))}
       </div>
-    </section>
+    </SectionWrapper>
   );
-};
-
-export default Skills;
+}

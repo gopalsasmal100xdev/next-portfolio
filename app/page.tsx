@@ -10,8 +10,8 @@ export default function Home() {
       <div className="flex flex-col gap-20">
         <Hero />
         <About />
-        {/* <Skills />
-        <Encryption />
+        <Skills />
+        {/* <Encryption />
         <Projects /> */}
       </div>
     </main>
