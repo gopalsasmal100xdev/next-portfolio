@@ -1,5 +1,8 @@
 import { FaLinkedinIn } from "react-icons/fa";
 
+export const NAME = "GOPAL SASMAL"
+export const name = "Gopal Sasmal"
+
 export const Skill_data = [
   {
     skill_name: "Html 5",
@@ -259,4 +262,14 @@ export const Other_skill = [
 export const Info_me =
   "I'm a skilled software developer with experience in JavaScript and TypeScript, and expertise in frameworks like React.js, Next.js, Node.js. I'm a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life!";
 
+export const Short_desc =
+  "I focus on developing user-friendly web applications that meet the client's requirements, with attention to detail, scalability, and performance.";
+
 export const Resume_url = "https://flowcv.com/resume/4upc6r21k2";
+
+export const titles = [
+  "Frontend Development",
+  "Backend Development",
+  "MERN Stack Development",
+  "Open Source Contribution"
+];
