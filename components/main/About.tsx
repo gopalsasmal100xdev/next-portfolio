@@ -6,6 +6,8 @@ import Link from "next/link";
 import { Resume_url, about, name, title } from "@/constants";
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import image from "@/public/image.jpg";
+import { motion } from "framer-motion";
+import { slideInFromLeft } from "@/utils/motion";
 
 export default function AboutPage() {
   return (
@@ -42,12 +44,19 @@ export default function AboutPage() {
               {about}
             </p>
             <div className="flex items-center gap-4 md:mt-4">
-              <Link
+              {/* <Link
                 href={Resume_url}
                 target="_blank"
                 className="text-sm md:text-base bg-violet-600 dark:bg-violet-700 text-white w-fit rounded-md py-2 px-6 hover:shadow-xl transition-shadow">
                 Resume
-              </Link>
+              </Link> */}
+              <motion.a
+                variants={slideInFromLeft(1)}
+                href={Resume_url}
+                target="_blank"
+                className="p-2 pl-3 pr-3 button-primary text-center text-white cursor-pointer rounded-lg max-w-lg">
+                Resume
+              </motion.a>
             </div>
           </div>
         </div>
