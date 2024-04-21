@@ -40,7 +40,7 @@ export default function AboutPage() {
               <h1 className="Welcome-text text-[13px]">{title}</h1>
             </div>
 
-            <p className="text-sm md:text-base my-2 text-gray-600 dark:text-gray-300">
+            <p className="text-sm md:text-base my-2 text-white dark:text-gray-300">
               {about}
             </p>
             <div className="flex items-center gap-4 md:mt-4">
