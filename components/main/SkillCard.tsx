@@ -38,14 +38,7 @@ export default function SkillCard({ skill: { title, url } }: SkillCardProps) {
           width={100}
           height={100}
           src={url}
-          className={`h-12 w-12 md:h-14 md:w-14 object-contain ${
-            url === "GitHub" ||
-            url === "Vercel" ||
-            url === "NextJS" ||
-            url === "ExpressJS"
-              ? "invert"
-              : "invert-0"
-          }`}
+          className={`h-12 w-12 md:h-14 md:w-14 object-contain invert-0`}
         />
       </div>
       <p className="text-sm font-medium text-white md:text-base">{title}</p>
