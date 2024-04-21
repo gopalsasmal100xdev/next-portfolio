@@ -435,7 +435,7 @@ export const skills = {
     {
       id: 5,
       title: "Vercel",
-      url: "/skills/vercel.svg",
+      url: "/skills/vercel.png",
     },
     {
       id: 9,
