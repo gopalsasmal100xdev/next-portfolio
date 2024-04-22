@@ -467,3 +467,54 @@ export const nav_items: string[] = [
   "coding",
   "contact",
 ];
+
+export interface Experience {
+  company: string;
+  position: string;
+  startDate: string;
+  endDate: string;
+  desc: string[];
+}
+export interface Education {
+  institute: string;
+  degree: string;
+  startDate: string;
+  endDate: string;
+}
+
+export const experiences: Experience[] = [
+  {
+    company: "Antier Solutions (Mohali, Punjab)",
+    desc: [
+      "Learnt decentralized applications (DApps) using blockchain platforms, smart contracts, and modern web development tools",
+      "Optimized website performance by implementing lazy loading and code splitting techniques, resulting in a 40% improvement in page load speed",
+      "Fixing several bugs in a pre-written codebase",
+    ],
+    startDate: "June 2023",
+    endDate: "Dec 2023",
+    position: "Blockchain Developer Apprenticeship",
+  },
+  // Add most recent at the end
+];
+
+export const educations: Education[] = [
+  {
+    institute: "Barageria R.A.M Sikshaniketan(H.S)",
+    degree: "General Subjects(B,E,M,H,G,P,C)[V - X]",
+    startDate: "2012",
+    endDate: "2017",
+  },
+  {
+    institute: "Jalchack N.N Vidyayatan",
+    degree: "Pure Science(Phy, Chem, Math, Bio)",
+    startDate: "2018",
+    endDate: "2020",
+  },
+  {
+    institute: "Chitkara University",
+    degree: "Computer Science and Engineering (B-Tech)",
+    startDate: "2020",
+    endDate: "2024",
+  },
+  // Add most recent at the end
+];
