@@ -14,7 +14,7 @@ export default function Skills() {
       className="min-h-screen mt-12 md:mt-0 mx-4 md:mx-0 xl:my-20 2xl:my-0">
       <h2 className="text-4xl text-white font-bold text-center">Tech Stack</h2>
 
-      <div className="md:w-1/2 overflow-x-auto scroll-hide lg:w-1/3 mx-auto mt-6 dark:bg-grey-800 p-2 flex justify-between items-center gap-3 rounded-md">
+      <div className="md:w-1/2 bg-white overflow-x-auto scroll-hide lg:w-1/3 mx-auto mt-6 dark:bg-grey-800 p-2 flex justify-between items-center gap-3 rounded-md">
         {Object.keys(skills).map((x: string, index: number) => {
           return (
             <span
@@ -27,7 +27,7 @@ export default function Skills() {
               className={`p-1.5 md:p-2 text-sm md:text-base w-full text-center cursor-pointer rounded-md ${
                 x === active
                   ? "bg-cyan-600 text-white"
-                  : "bg-gray-300 hover:bg-gray-100"
+                  : "hover:bg-gray-100 text-black"
               } transition-all capitalize`}>
               {x}
             </span>
