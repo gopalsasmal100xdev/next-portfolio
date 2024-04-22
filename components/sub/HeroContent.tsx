@@ -9,7 +9,6 @@ import Image from "next/image";
 import { NAME, Resume_url, Short_desc, titles } from "@/constants";
 import Typewriter from "typewriter-effect";
 import Globe from "./Globe";
-import { Button } from "../ui/button";
 import Link from "next/link";
 
 const HeroContent = () => {
