@@ -452,3 +452,12 @@ export const skills = {
 
 export const contact_desc =
   "Feel free to slide into my DMs anytime! Whether you've got a burning question or simply want to shoot the breeze, I'll try my best to get back to you!";
+
+export const nav_items: string[] = [
+  "home",
+  "about",
+  "projects",
+  "experience",
+  "coding",
+  "contact",
+];

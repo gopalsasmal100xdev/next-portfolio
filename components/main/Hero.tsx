@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div
       className="relative flex flex-col h-full w-full -mt-[8rem]"
-      id="about-me">
+      id="home">
       <HeroContent />
     </div>
   );
