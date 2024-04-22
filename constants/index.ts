@@ -395,6 +395,11 @@ export const skills = {
       title: "Docker",
       url: "/skills/docker.png",
     },
+    {
+      id: 10,
+      title: "GraphQl",
+      url: "/skills/graphql.png",
+    },
   ],
   other: [
     {
@@ -456,6 +461,7 @@ export const contact_desc =
 export const nav_items: string[] = [
   "home",
   "about",
+  "skills",
   "projects",
   "experience",
   "coding",

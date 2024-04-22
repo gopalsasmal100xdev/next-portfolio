@@ -10,9 +10,13 @@ const Navbar = () => {
   return (
     <div className="w-full h-[65px] fixed top-0 shadow-lg bg-[#03001417] backdrop-blur-md z-50 px-10">
       <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[10px]">
-        <Link
-          href="/"
-          className="h-auto w-auto flex flex-row items-center">
+        <ScrollLink
+          to={"home"}
+          offset={-60}
+          smooth={true}
+          duration={100}
+          isDynamic={true}
+          className="h-auto w-auto flex flex-row cursor-pointer items-center">
           <Image
             src="/gs.png"
             alt="logo"
@@ -20,11 +24,10 @@ const Navbar = () => {
             height={40}
             className="cursor-pointer hover:animate-slowspin"
           />
-
           <span className="font-bold ml-[10px] hidden md:block text-gray-300">
             GOPAL SASMAL
           </span>
-        </Link>
+        </ScrollLink>
         <ul className="flex items-center gap-8">
           {nav_items.map((x, i) => (
             <li key={i}>
