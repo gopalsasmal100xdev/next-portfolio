@@ -63,12 +63,13 @@ const HeroContent = () => {
           className="text-lg text-gray-400 my-5 max-w-[600px]">
           {Short_desc}
         </motion.p>
-        <a
+        <motion.a
+          variants={slideInFromLeft(1)}
           href={Resume_url}
           target="_blank"
           className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]">
           Resume
-        </a>
+        </motion.a>
       </div>
 
       <div className="w-full h-full lg:flex lg:justify-center lg:items-center hidden">
