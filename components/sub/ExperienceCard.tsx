@@ -37,16 +37,7 @@ export default function ExperienceCard({
       transition: { duration: 0.6, ease: "easeInOut" },
     },
   };
-  console.log(
-    index,
-    company,
-    position,
-    desc,
-    institute,
-    degree,
-    startDate,
-    endDate
-  );
+
   const card = {
     company,
     position,
@@ -112,8 +103,13 @@ export function BashCard({
         <p className="text-sm">{`${startDate}-${endDate}`}</p>
       </div>
       <div className="mt-4">
-        <p className="text-green-400 text-1xl font-bold">$ {institute || company}</p>
-        <p className="text-cyan-400 text-1xl font-bold"> {degree && `~ ${degree}`}</p>
+        <p className="text-green-400 text-1xl font-bold">
+          $ {institute || company}
+        </p>
+        <p className="text-cyan-400 text-1xl font-bold">
+          {" "}
+          {degree && `~ ${degree}`}
+        </p>
         <ul className="ml-2">
           {desc &&
             desc.map((x, index) => (

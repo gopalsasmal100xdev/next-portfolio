@@ -518,3 +518,226 @@ export const educations: Education[] = [
   },
   // Add most recent at the end
 ];
+
+export const CodingProfiles = [];
+
+export interface CodeBadge {
+  title: string;
+  date: string;
+  url: string;
+  year?: number;
+}
+
+type BadgesType = {
+  [key: string]: CodeBadge[];
+};
+
+export const Badges: BadgesType = {
+  complition: [
+    {
+      title: "100 Days Badge",
+      date: "09-04-2024",
+      url: "/badges/2024-100.png",
+      year: 2024,
+    },
+    {
+      title: "50 Days Badge",
+      date: "19-02-2024",
+      url: "/badges/2024-50.png",
+      year: 2024,
+    },
+    {
+      title: "Annual Badge",
+      date: "15-12-2023",
+      url: "/badges/2023.png",
+      year: 2023,
+    },
+    {
+      title: "50 Days Badge",
+      date: "15-12-2023",
+      url: "/badges/2023-50.png",
+      year: 2023,
+    },
+    {
+      title: "100 Days Badge",
+      date: "15-12-2023",
+      url: "/badges/2023-100.png",
+      year: 2023,
+    },
+    {
+      title: "100 Days Badge",
+      date: "01-01-2023",
+      url: "/badges/2022-100.png",
+      year: 2023,
+    },
+  ],
+  monthly: [
+    // recent badge puts at the end
+    // 2024
+    {
+      title: "100 Days Badge",
+      date: "09-04-2024",
+      url: "/badges/2024-100.png",
+      year: 2024,
+    },
+    {
+      title: "50 Days Badge",
+      date: "19-02-2024",
+      url: "/badges/2024-50.png",
+      year: 2024,
+    },
+    {
+      title: "January Badge",
+      date: "31-01-2024",
+      url: "/badges/2024-01.png",
+      year: 2024,
+    },
+    {
+      title: "Fabruary Badge",
+      date: "29-02-2024",
+      url: "/badges/2024-02.png",
+      year: 2024,
+    },
+    {
+      title: "March Badge",
+      date: "31-03-2024",
+      url: "/badges/2024-03.png",
+      year: 2024,
+    },
+    // 2023
+    {
+      title: "Annual Badge",
+      date: "15-12-2023",
+      url: "/badges/2023.png",
+      year: 2023,
+    },
+    {
+      title: "50 Days",
+      date: "15-12-2023",
+      url: "/badges/2023-50.png",
+      year: 2023,
+    },
+    {
+      title: "100 Days",
+      date: "15-12-2023",
+      url: "/badges/2023-100.png",
+      year: 2023,
+    },
+    {
+      title: "January Badge",
+      date: "31-01-2023",
+      url: "/badges/2023-01.png",
+      year: 2023,
+    },
+    {
+      title: "Fabruary Badge",
+      date: "28-02-2023",
+      url: "/badges/2023-02.png",
+      year: 2023,
+    },
+    {
+      title: "March Badge",
+      date: "31-03-2023",
+      url: "/badges/2023-03.png",
+      year: 2023,
+    },
+    {
+      title: "April Badge",
+      date: "30-04-2023",
+      url: "/badges/2023-04.png",
+      year: 2023,
+    },
+    {
+      title: "May Badge",
+      date: "31-05-2023",
+      url: "/badges/2023-05.png",
+      year: 2023,
+    },
+    {
+      title: "June Badge",
+      date: "30-06-2023",
+      url: "/badges/2023-06.png",
+      year: 2023,
+    },
+    {
+      title: "July Badge",
+      date: "31-07-2023",
+      url: "/badges/2023-07.png",
+      year: 2023,
+    },
+    {
+      title: "August Badge",
+      date: "31-08-2023",
+      url: "/badges/2023-08.png",
+      year: 2023,
+    },
+    {
+      title: "September Badge",
+      date: "30-09-2023",
+      url: "/badges/2023-09.png",
+      year: 2023,
+    },
+    {
+      title: "October Badge",
+      date: "31-10-2023",
+      url: "/badges/2023-10.png",
+      year: 2023,
+    },
+    {
+      title: "November Badge",
+      date: "30-11-2023",
+      url: "/badges/2023-11.png",
+      year: 2023,
+    },
+    {
+      title: "December Badge",
+      date: "31-12-2023",
+      url: "/badges/2023-12.png",
+      year: 2023,
+    },
+
+    // 2022
+    {
+      title: "June Badge",
+      date: "30-6-2022",
+      url: "/badges/2022-06.png",
+      year: 2022,
+    },
+    {
+      title: "October Badge",
+      date: "31-10-2022",
+      url: "/badges/2022-10.png",
+      year: 2022,
+    },
+    {
+      title: "November Badge",
+      date: "30-11-2022",
+      url: "/badges/2022-11.png",
+      year: 2022,
+    },
+    {
+      title: "December Badge",
+      date: "31-12-2022",
+      url: "/badges/2022-12.png",
+      year: 2022,
+    },
+  ],
+  github: [
+    {
+      title: "Pull Shark",
+      date: "Mar 28, 2023",
+      url: "/badges/github-pull-shark.png",
+    },
+    {
+      title: "Quickdraw",
+      date: "Nov 10, 2023",
+      url: "/badges/github-quickdraw.png",
+    },
+    {
+      title: "Yolo",
+      date: "Jan 31, 2023",
+      url: "/badges/github-yolo.png",
+    },
+  ],
+  outhers: [],
+};
