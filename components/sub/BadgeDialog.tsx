@@ -21,6 +21,7 @@ import {
 import React, { useState } from "react";
 import { Badges, CodeBadge } from "@/constants";
 import ViewBadge from "./ViewBadge";
+import { ArrowRight } from "lucide-react";
 
 export default function BadgeDialog({
   id,
@@ -42,14 +43,9 @@ export default function BadgeDialog({
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button
-          data-ripple-light="true"
-          type="button"
-          className="text-white select-none rounded-lg bg-[#5c96e66a] py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase shadow-md shadow-blue-500/20 transition-all focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-          View More
-        </button>
+        <ArrowRight />
       </DialogTrigger>
-      <DialogContent className="max-w-screen-md bg-[#3fcfff17] border-transparent rounded-md text-white">
+      <DialogContent className="max-w-screen-md bg-[#3fcfff17] border-transparent backdrop-blur-sm rounded-md text-white">
         <DialogHeader>
           <div className="flex justify-between items-center">
             <div className="flex space-x-2 text-red-500">
@@ -89,7 +85,7 @@ export default function BadgeDialog({
 
             <div className="lg:w-4/8 2xl:w-4/5 my-8 mx-auto md:px-12 grid grid-cols-3 md:grid-cols-4 xl:grid-cols-5 place-items-center gap-8">
               {badges.map((x, index) => (
-                <ViewBadge {...x} key={index}/>
+                <ViewBadge {...x} key={index} />
               ))}
             </div>
           </DialogDescription>
