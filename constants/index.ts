@@ -741,3 +741,5 @@ export const Badges: BadgesType = {
   ],
   outhers: [],
 };
+
+export const projects_categories = ["SPA","MERN Stack", "Backend", "Basic App"];
