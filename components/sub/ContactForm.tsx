@@ -17,7 +17,7 @@ export default function ContactForm() {
     setLoading(true);
 
     try {
-      await fetch("http://localhost:3000/api/send", {
+      await fetch("/api/send", {
         method: "POST",
         body: JSON.stringify({ fullname, email, message }),
       });
