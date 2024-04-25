@@ -1,24 +1,53 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { BiLoaderAlt } from "react-icons/bi";
 import { contact_desc } from "@/constants";
+import { useToast } from "../ui/use-toast";
+import { ToastAction } from "../ui/toast";
 
 export default function ContactForm() {
   const [fullname, setFullname] = useState<string | null>(null);
   const [email, setEmail] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
+  const { toast } = useToast();
 
-  function submitHandler(e: React.FormEvent) {
+  async function submitHandler(e: React.FormEvent) {
     e.preventDefault();
-    console.log(fullname, email, message);
+    setLoading(true);
+
+    try {
+      await fetch("http://localhost:3000/api/send", {
+        method: "POST",
+        body: JSON.stringify({ fullname, email, message }),
+      });
+      setLoading(false);
+      setEmail("");
+      setFullname("");
+      setMessage("");
+      toast({
+        title: "✅ Email Send Successfully!",
+        description: "Thak You for sending message!💖",
+      });
+    } catch (error) {
+      setLoading(false);
+      toast({
+        variant: "destructive",
+        title: "Uh oh! Something went wrong.",
+        description: `${error}`,
+        action: <ToastAction altText="Try again">Try again</ToastAction>,
+      });
+    }
+
+    setLoading(false);
   }
 
   return (
     <div className="w-full lg:w-5/6 2xl:w-3/4 mt-10 md:mt-16 mx-auto flex justify-between rounded-xl">
       <div className="flex-1">
-        <h3 className="text-2xl pb-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">Get in touch</h3>
+        <h3 className="text-2xl pb-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+          Get in touch
+        </h3>
         <p className="text-gray-400 mb-4 text-sm md:text-base">
           {contact_desc}
         </p>
@@ -55,14 +84,10 @@ export default function ContactForm() {
           />
           <button
             disabled={loading}
-            className="p-2 pl-3 pr-3 button-primary text-center text-white cursor-pointer rounded-lg w-auto">
-            {loading ? (
-              <span className="flex items-center gap-2">
-                Say Hello <BiLoaderAlt className="animate-spin" />
-              </span>
-            ) : (
-              "Send 🕊️"
-            )}
+            className={`p-2 pl-3 pr-3 button-primary text-center text-white rounded-lg w-auto ${
+              loading ? "cursor-not-allowed" : "cursor-pointer"
+            }`}>
+            Send 🕊️
           </button>
         </form>
       </div>

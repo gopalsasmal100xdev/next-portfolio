@@ -4,6 +4,7 @@ import "./globals.css";
 import StarsCanvas from "@/components/main/StarBackground";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   title: "GOPAL SASMAL | Portfolio",
   description: "portfolio",
   icons: {
-    icon: '/favicon.ico',
+    icon: "/favicon.ico",
   },
 };
 
@@ -27,6 +28,7 @@ export default function RootLayout({
         <StarsCanvas />
         <Navbar />
         {children}
+        <Toaster />
         {/* <Footer /> */}
       </body>
     </html>
