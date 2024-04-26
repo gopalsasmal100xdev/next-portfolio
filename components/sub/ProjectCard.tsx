@@ -36,9 +36,9 @@ const ProjectCard = ({
           <Image
             src={image_url}
             alt={name}
-            width={10}
-            height={10}
-            className="w-full h-full object-cover rounded-2xl z-10"
+            width={1000}
+            height={1000}
+            className="w-full h-full object-cover rounded-md z-10"
           />
 
           <div className="absolute inset-0 flex justify-end m-3">
@@ -56,15 +56,15 @@ const ProjectCard = ({
             </Link>
           </div>
           {live_link && (
-            <div className="absolute inset-0 flex justify-end m-3">
+            <div className="flex justify-end">
               <Link
                 href={live_link}
                 target="_blank"
-                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer">
+                className="black-gradient w-20 h-20 rounded-full flex justify-center items-center cursor-pointer">
                 <Link2Icon
                   className="text-white cursor-pointer"
-                  width={10}
-                  height={10}
+                  width={20}
+                  height={20}
                 />
               </Link>
             </div>
@@ -77,8 +77,10 @@ const ProjectCard = ({
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <span className="cursor-pointer inline-flex items-center rounded-md bg-[#ff29f41f] px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
+          {tags.map((tag, index) => (
+            <span
+              key={index}
+              className="cursor-pointer inline-flex items-center rounded-md bg-[#ff29f41f] px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
               {tag}
             </span>
           ))}

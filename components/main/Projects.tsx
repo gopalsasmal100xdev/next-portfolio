@@ -12,7 +12,7 @@ export default function Projects() {
       <div className="flex justify-center items-center">
         <div className="w-[80%] mt-20 flex flex-wrap gap-7">
           {projects.map((project, index) => (
-            <ProjectCard key={`project-${index}`} {...project} />
+            <ProjectCard key={index} {...project} />
           ))}
         </div>
       </div>
