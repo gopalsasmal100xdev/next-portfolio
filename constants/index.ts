@@ -544,3 +544,93 @@ export const Badges: BadgesType = {
   ],
   outhers: [],
 };
+
+export const projects_categories = [
+  "SPA",
+  "MERN Stack",
+  "Backend",
+  "Basic App",
+];
+
+interface Project {
+  name: string;
+  description: string;
+  tags: string[];
+  image_url: string;
+  source_code_url: string;
+  live_link?: string;
+}
+
+export const projects: Project[] = [
+  {
+    name: "E-Shop",
+    description:
+      "Responsive and multi-functionality e-commerce platform E-Shop, Enhanced user experience with a user-friendly interface, secure shopping cart, and efficient payment processing",
+    tags: [
+      "ReactJS",
+      "Tailwind",
+      "Javascript",
+      "NodeJS",
+      "MongoDB",
+      "Express",
+      "Node Mailer",
+      "Socet.io",
+    ],
+    image_url: "/projects/eshop.png",
+    source_code_url: "https://github.com/gopalsasmal100xdev/E-Shop",
+    live_link: "",
+  },
+  {
+    name: "Ninja Board",
+    description:
+      "Created a collaborative Ninjaboard app with a rich toolbar including Text, Shapes, Sticky Note, and Pencil tools. Added layering for better organization, undo/redo, and keyboard shortcuts for efficient editing. Enabled real-time collaboration via a database for simultaneous editing and live updates.",
+    tags: [
+      "NextJS-14",
+      "React",
+      "Typescript",
+      "Javascript",
+      "Convex",
+      "Clerk",
+      "Tailwind",
+      "Shadcn",
+    ],
+    image_url: "/projects/ninjaboard.png",
+    source_code_url: "https://github.com/gopalsasmal100xdev/Ninja-Board",
+    live_link: "https://ninja-board.vercel.app/",
+  },
+  {
+    name: "Hippo Digital Goods",
+    description: "Digital marketplace for high-quality digital assets",
+    tags: ["NextJS", "React", "Typescript", "Javascript", "Tailwind"],
+    image_url: "/projects/hippodigitalgoods.png",
+    source_code_url: "https://github.com/gopalsasmal100xdev/HippoDigitalGoods",
+    live_link: "https://hippo-digital-goods.vercel.app",
+  },
+  {
+    name: "Pinfinity",
+    description:
+      "Web-based platform that allows users to easily share, organize, and discover photos with their friends and followers. Implemented key features such as upload, comments ",
+    tags: ["react", "Google Auth API"],
+    image_url: "/projects/pinfinity.png",
+    source_code_url: "https://github.com/gopal24-colab/Pinfinity",
+    live_link: "https://pinfinity-gs.netlify.app/",
+  },
+  {
+    name: "AI Art Gallery",
+    description:
+      "The AI Art Gallery project is a web application that leverages the power of artificial intelligence to create and showcase unique pieces of artwork.Using user prompts create new artwork using Open AI",
+    tags: ["React", "Javascript", "Open AI", "NodeJS"],
+    image_url: "/projects/ai-art.png",
+    source_code_url: "https://github.com/gopal24-colab/ai-art-gallery",
+    live_link: "https://ai-art-gallery.netlify.app/",
+  },
+  {
+    name: "Library Management",
+    description:
+      "A servers side library Management project,Admin can add books and only one book only can borrowed by one user",
+    tags: ["NodeJS", "Javascript", "MongoDB", "Multer", "Mongoose"],
+    image_url: "/projects/library.png",
+    source_code_url: "https://github.com/gopalsasmal100xdev/Library-Management",
+    live_link: "https://library-management-gs.onrender.com/",
+  },
+];
