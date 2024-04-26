@@ -1,88 +1,5 @@
-import { FaLinkedinIn } from "react-icons/fa";
-
 export const NAME = "GOPAL SASMAL";
 export const name = "Gopal Sasmal";
-
-export const Skill_data = [
-  {
-    skill_name: "Html 5",
-    Image: "/html.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Css",
-    Image: "/css.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Java Script",
-    Image: "/js.png",
-    width: 65,
-    height: 65,
-  },
-  {
-    skill_name: "Tailwind Css",
-    Image: "/tailwind.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React",
-    Image: "/react.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Redux",
-    Image: "/redux.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React Query",
-    Image: "/reactquery.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Type Script",
-    Image: "/ts.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Next js 13",
-    Image: "/next.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Framer Motion",
-    Image: "/framer.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Stripe Payment",
-    Image: "/stripe.webp",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Node js",
-    Image: "/node-js.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Mongo db",
-    Image: "/mongodb.png",
-    width: 40,
-    height: 40,
-  },
-];
 
 interface SocialsType {
   name: string;
@@ -105,157 +22,6 @@ export const Socials: SocialsType[] = [
     name: "Twitter",
     profile_link: "https://twitter.com/GopalSasmal01",
     icon: "/icons8-twitter.svg",
-  },
-];
-
-export const Frontend_skill = [
-  {
-    skill_name: "Html 5",
-    Image: "/html.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Css",
-    Image: "/css.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Java Script",
-    Image: "/js.png",
-    width: 65,
-    height: 65,
-  },
-  {
-    skill_name: "Tailwind Css",
-    Image: "/tailwind.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Material UI",
-    Image: "/mui.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React",
-    Image: "/react.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Redux",
-    Image: "/redux.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React Query",
-    Image: "/reactquery.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Type Script",
-    Image: "/ts.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Next js 13",
-    Image: "/next.png",
-    width: 80,
-    height: 80,
-  },
-];
-
-export const Backend_skill = [
-  {
-    skill_name: "Node js",
-    Image: "/node-js.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Express js",
-    Image: "/express.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Mongo db",
-    Image: "/mongodb.png",
-    width: 40,
-    height: 40,
-  },
-  {
-    skill_name: "Fire base",
-    Image: "/Firebase.png",
-    width: 55,
-    height: 55,
-  },
-  {
-    skill_name: "Postger SQL",
-    Image: "/postger.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "My SQL",
-    Image: "/mysql.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Prisma",
-    Image: "/prisma.webp",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Graphql",
-    Image: "/graphql.png",
-    width: 80,
-    height: 80,
-  },
-];
-
-export const Full_stack = [
-  {
-    skill_name: "React Native",
-    Image: "/ReactNative .png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Tauri",
-    Image: "/tauri.svg",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Docker",
-    Image: "/docker.webp",
-    width: 70,
-    height: 70,
-  },
-
-  {
-    skill_name: "Figma",
-    Image: "/figma.png",
-    width: 50,
-    height: 50,
-  },
-];
-
-export const Other_skill = [
-  {
-    skill_name: "Go",
-    Image: "/go.png",
-    width: 60,
-    height: 60,
   },
 ];
 
@@ -525,6 +291,7 @@ export interface CodeBadge {
   title: string;
   date: string;
   url: string;
+  gif_url: string;
   year?: number;
 }
 
@@ -538,36 +305,42 @@ export const Badges: BadgesType = {
       title: "100 Days Badge",
       date: "09-04-2024",
       url: "/badges/2024-100.png",
+      gif_url: "/badges/2024-100.gif",
       year: 2024,
     },
     {
       title: "50 Days Badge",
       date: "19-02-2024",
       url: "/badges/2024-50.png",
+      gif_url: "/badges/2024-50.gif",
       year: 2024,
     },
     {
       title: "Annual Badge",
       date: "15-12-2023",
       url: "/badges/2023.png",
+      gif_url: "/badges/2023.gif",
       year: 2023,
     },
     {
       title: "50 Days Badge",
       date: "15-12-2023",
       url: "/badges/2023-50.png",
+      gif_url: "/badges/2023-50.gif",
       year: 2023,
     },
     {
       title: "100 Days Badge",
       date: "15-12-2023",
       url: "/badges/2023-100.png",
+      gif_url: "/badges/2023-100.gif",
       year: 2023,
     },
     {
       title: "100 Days Badge",
       date: "01-01-2023",
       url: "/badges/2022-100.png",
+      gif_url: "/badges/2022-100.gif",
       year: 2023,
     },
   ],
@@ -578,30 +351,35 @@ export const Badges: BadgesType = {
       title: "100 Days Badge",
       date: "09-04-2024",
       url: "/badges/2024-100.png",
+      gif_url: "/badges/2024-100.gif",
       year: 2024,
     },
     {
       title: "50 Days Badge",
       date: "19-02-2024",
       url: "/badges/2024-50.png",
+      gif_url: "/badges/2024-50.gif",
       year: 2024,
     },
     {
       title: "January Badge",
       date: "31-01-2024",
       url: "/badges/2024-01.png",
+      gif_url: "/badges/2024-01.gif",
       year: 2024,
     },
     {
       title: "Fabruary Badge",
       date: "29-02-2024",
       url: "/badges/2024-02.png",
+      gif_url: "/badges/2024-02.gif",
       year: 2024,
     },
     {
       title: "March Badge",
       date: "31-03-2024",
       url: "/badges/2024-03.png",
+      gif_url: "/badges/2024-03.gif",
       year: 2024,
     },
     // 2023
@@ -609,90 +387,105 @@ export const Badges: BadgesType = {
       title: "Annual Badge",
       date: "15-12-2023",
       url: "/badges/2023.png",
+      gif_url: "/badges/2023.gif",
       year: 2023,
     },
     {
       title: "50 Days",
       date: "15-12-2023",
       url: "/badges/2023-50.png",
+      gif_url: "/badges/2023-50.gif",
       year: 2023,
     },
     {
       title: "100 Days",
       date: "15-12-2023",
       url: "/badges/2023-100.png",
+      gif_url: "/badges/2023-100.gif",
       year: 2023,
     },
     {
       title: "January Badge",
       date: "31-01-2023",
       url: "/badges/2023-01.png",
+      gif_url: "/badges/2023-01.gif",
       year: 2023,
     },
     {
       title: "Fabruary Badge",
       date: "28-02-2023",
       url: "/badges/2023-02.png",
+      gif_url: "/badges/2023-02.gif",
       year: 2023,
     },
     {
       title: "March Badge",
       date: "31-03-2023",
       url: "/badges/2023-03.png",
+      gif_url: "/badges/2023-03.gif",
       year: 2023,
     },
     {
       title: "April Badge",
       date: "30-04-2023",
       url: "/badges/2023-04.png",
+      gif_url: "/badges/2023-04.gif",
       year: 2023,
     },
     {
       title: "May Badge",
       date: "31-05-2023",
       url: "/badges/2023-05.png",
+      gif_url: "/badges/2023-05.gif",
       year: 2023,
     },
     {
       title: "June Badge",
       date: "30-06-2023",
       url: "/badges/2023-06.png",
+      gif_url: "/badges/2023-06.gif",
       year: 2023,
     },
     {
       title: "July Badge",
       date: "31-07-2023",
       url: "/badges/2023-07.png",
+      gif_url: "/badges/2023-07.gif",
       year: 2023,
     },
     {
       title: "August Badge",
       date: "31-08-2023",
       url: "/badges/2023-08.png",
+      gif_url: "/badges/2023-08.gif",
       year: 2023,
     },
     {
       title: "September Badge",
       date: "30-09-2023",
       url: "/badges/2023-09.png",
+      gif_url: "/badges/2023-09.gif",
       year: 2023,
     },
     {
       title: "October Badge",
       date: "31-10-2023",
       url: "/badges/2023-10.png",
+      gif_url: "/badges/2023-10.gif",
       year: 2023,
     },
     {
       title: "November Badge",
       date: "30-11-2023",
       url: "/badges/2023-11.png",
+      gif_url: "/badges/2023-11.gif",
       year: 2023,
     },
     {
       title: "December Badge",
       date: "31-12-2023",
       url: "/badges/2023-12.png",
+      gif_url: "/badges/2023-12.gif",
       year: 2023,
     },
 
@@ -701,24 +494,28 @@ export const Badges: BadgesType = {
       title: "June Badge",
       date: "30-6-2022",
       url: "/badges/2022-06.png",
+      gif_url: "/badges/2022-06.gif",
       year: 2022,
     },
     {
       title: "October Badge",
       date: "31-10-2022",
       url: "/badges/2022-10.png",
+      gif_url: "/badges/2022-10.gif",
       year: 2022,
     },
     {
       title: "November Badge",
       date: "30-11-2022",
       url: "/badges/2022-11.png",
+      gif_url: "/badges/2022-11.gif",
       year: 2022,
     },
     {
       title: "December Badge",
       date: "31-12-2022",
       url: "/badges/2022-12.png",
+      gif_url: "/badges/2022-12.gif",
       year: 2022,
     },
   ],
@@ -727,16 +524,22 @@ export const Badges: BadgesType = {
       title: "Pull Shark",
       date: "Mar 28, 2023",
       url: "/badges/github-pull-shark.png",
+      gif_url: "/badges/github-pull-shark.png",
+      year: 2023,
     },
     {
       title: "Quickdraw",
       date: "Nov 10, 2023",
       url: "/badges/github-quickdraw.png",
+      gif_url: "/badges/github-quickdraw.png",
+      year: 2023,
     },
     {
       title: "Yolo",
       date: "Jan 31, 2023",
       url: "/badges/github-yolo.png",
+      gif_url: "/badges/github-yolo.png",
+      year: 2023,
     },
   ],
   outhers: [],

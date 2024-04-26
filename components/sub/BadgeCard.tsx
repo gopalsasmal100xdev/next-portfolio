@@ -10,7 +10,7 @@ export default function BadgeCard({
   header: string;
 }) {
   return (
-    <div className="relative flex w-full flex-col rounded-xl bg-clip-border text-gray-700">
+    <div className="relative flex w-full flex-col rounded-xl bg-clip-border text-[#ffffffca] p-2">
       <div className="flex flex-row-reverse">
         <div className="h-[24px] w-[24px] text-label-3 dark:text-dark-label-3 cursor-pointer">
           {Badges[id].length > 4 ? (
@@ -27,8 +27,8 @@ export default function BadgeCard({
           );
         })}
       </div>
-      <div className="text-label-3 mt-7 text-xs">Most Recent Badge</div>
-      <div className="text-label-1 dark:text-dark-label-1 text-base">
+      <div className="text-label-3 mt-10 text-xs">Most Recent Badge</div>
+      <div className="text-label-1 text-dark-label-1 text-base">
         {header}
       </div>
     </div>
