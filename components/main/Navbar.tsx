@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
 import React from "react";
+import MobileNavbar from "./MobileNavbar";
 
 const Navbar = () => {
   return (
@@ -28,7 +29,7 @@ const Navbar = () => {
             GOPAL SASMAL
           </span>
         </ScrollLink>
-        <ul className="flex items-center gap-8">
+        <ul className="hidden md:flex md:justify-between md:items-center gap-4">
           {nav_items.map((x, i) => (
             <li key={i}>
               <ScrollLink
@@ -43,8 +44,13 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+      
+        <div className="md:hidden">
+          <MobileNavbar />
+        </div>
 
-        <div className="flex flex-row gap-5">
+
+        <div className="hidden md:flex md:flex-row gap-5">
           {Socials.map(({ name, icon, profile_link }) => (
             <Link
               href={profile_link}
