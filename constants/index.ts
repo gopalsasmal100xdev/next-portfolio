@@ -742,4 +742,39 @@ export const Badges: BadgesType = {
   outhers: [],
 };
 
-export const projects_categories = ["SPA","MERN Stack", "Backend", "Basic App"];
+export const projects_categories = [
+  "SPA",
+  "MERN Stack",
+  "Backend",
+  "Basic App",
+];
+
+interface Project {
+  name: string;
+  description: string;
+  tags: string[];
+  image_url: string;
+  source_code_url: string;
+  live_link?: string;
+}
+
+export const projects: Project[] = [
+  {
+    name: "Pinfinity",
+    description:
+      "Web-based platform that allows users to easily share, organize, and discover photos with their friends and followers. Implemented key features such as upload, comments ",
+    tags: ["react", "Google API"],
+    image_url: "/projects/pinfinity.png",
+    source_code_url: "https://github.com/gopal24-colab/Pinfinity",
+    live_link: "",
+  },
+  {
+    name: "AI Art Gallery",
+    description:
+      "The AI Art Gallery project is a web application that leverages the power of artificial intelligence to create and showcase unique pieces of artwork.Using user prompts create new artwork using Open AI",
+    tags: ["React", "Open AI", "NodeJS"],
+    image_url: "/projects/",
+    source_code_url: "https://github.com/gopal24-colab/ai-art-gallery",
+    live_link: "/projects/pinfinity.png",
+  },
+];
