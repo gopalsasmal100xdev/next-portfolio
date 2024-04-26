@@ -10,13 +10,13 @@ export default function CodingProfiles() {
       <div className="flex justify-center items-center mt-10">
       <div className="lg:w-[80%] w-[100%]">
           <div className="flex flex-col md:flex-row gap-4">
-            <div className="w-full md:w-1/3 rounded-lg p-2 bg-[#3fcfff17] shadow-md  backdrop-blur-sm">
+            <div className="w-full md:w-1/3 rounded-lg p-2 bg-[#3fcfff17] border-transparent backdrop-blur-sm shadow-md">
               {/* Solved problems fetch from leetcode api */}
             </div>
-            <div className="w-full md:w-1/3 rounded-lg p-2 bg-[#3fcfff17] shadow-md  backdrop-blur-sm">
+            <div className="w-full md:w-1/3 rounded-lg p-2 bg-[#3fcfff17] border-transparent backdrop-blur-sm shadow-md">
               <BadgeCard id={"complition"} header="LeetCode Badges" />
             </div>
-            <div className="w-full md:w-1/3 rounded-lg p-2 bg-[#3fcfff17] shadow-md  backdrop-blur-sm">
+            <div className="w-full md:w-1/3 rounded-lg p-2 bg-[#3fcfff17] border-transparent backdrop-blur-sm shadow-md">
               <BadgeCard id={"github"} header="GitHub Badges" />
             </div>
           </div>
