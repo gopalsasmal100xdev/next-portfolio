@@ -17,6 +17,7 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-tooltip": "^1.0.7",
     "@types/react-scroll": "^1.8.10",
+    "@vercel/analytics": "^1.2.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "fast-average-color": "^9.4.0",
