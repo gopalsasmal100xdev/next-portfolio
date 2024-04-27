@@ -692,8 +692,8 @@ export const certificates: Certificate[] = [
     provider: "HackerRank",
   },
   {
-    name: "CSS (Basic)",
-    iframe_link: "https://www.hackerrank.com/certificates/4bdfa3ec5982",
+    name: "Java (Basic)",
+    iframe_link: "https://www.hackerrank.com/certificates/ede3ba7dc1a3",
     bg_color: "green",
     provider: "HackerRank",
   },
