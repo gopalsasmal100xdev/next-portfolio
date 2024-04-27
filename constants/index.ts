@@ -634,3 +634,91 @@ export const projects: Project[] = [
     live_link: "https://library-management-gs.onrender.com/",
   },
 ];
+
+export type Certificate = {
+  name: string;
+  iframe_link: string;
+  bg_color: "red" | "green" | "blue" | "yellow";
+  provider: string;
+};
+
+export const certificates: Certificate[] = [
+  {
+    name: "Frontend Developer (React)",
+    iframe_link: "https://www.hackerrank.com/certificates/ad77b4d7a95f",
+    bg_color: "red",
+    provider: "HackerRank",
+  },
+  {
+    name: "Problem Solving (Basic)",
+    iframe_link: "https://www.hackerrank.com/certificates/fa26abb915f1",
+    bg_color: "green",
+    provider: "HackerRank",
+  },
+  {
+    name: "Problem Solving (Intermediate)",
+    iframe_link: "https://www.hackerrank.com/certificates/ae5417d16f43",
+    bg_color: "yellow",
+    provider: "HackerRank",
+  },
+  {
+    name: "JavaScript (Basic)",
+    iframe_link: "https://www.hackerrank.com/certificates/82255d5c49f1",
+    bg_color: "green",
+    provider: "HackerRank",
+  },
+  {
+    name: "JavaScript (Intermediate)",
+    iframe_link: "https://www.hackerrank.com/certificates/0c4a22620858",
+    bg_color: "yellow",
+    provider: "HackerRank",
+  },
+  {
+    name: "React (Basic)",
+    iframe_link: "https://www.hackerrank.com/certificates/1ce21c585590",
+    bg_color: "green",
+    provider: "HackerRank",
+  },
+  {
+    name: "Node (Basic)",
+    iframe_link: "https://www.hackerrank.com/certificates/a6342aa37da9",
+    bg_color: "green",
+    provider: "HackerRank",
+  },
+  {
+    name: "Rest API (Intermediate)",
+    iframe_link: "https://www.hackerrank.com/certificates/0fb4f3933649",
+    bg_color: "yellow",
+    provider: "HackerRank",
+  },
+  {
+    name: "CSS (Basic)",
+    iframe_link: "https://www.hackerrank.com/certificates/4bdfa3ec5982",
+    bg_color: "green",
+    provider: "HackerRank",
+  },
+  {
+    name: "CSS (Basic)",
+    iframe_link: "https://www.hackerrank.com/certificates/4bdfa3ec5982",
+    bg_color: "green",
+    provider: "HackerRank",
+  },
+  {
+    name: "SQL (Basic)",
+    iframe_link: "https://www.hackerrank.com/certificates/9baf89e9f5f9",
+    bg_color: "green",
+    provider: "HackerRank",
+  },
+  {
+    name: "SQL (Intermediate)",
+    iframe_link: "https://www.hackerrank.com/certificates/5f6c71b0b12a",
+    bg_color: "yellow",
+    provider: "HackerRank",
+  },
+  {
+    name: "SQL (Advanced)",
+    iframe_link: "https://www.hackerrank.com/certificates/b4aabc62a746",
+    bg_color: "red",
+    provider: "HackerRank",
+  },
+];
