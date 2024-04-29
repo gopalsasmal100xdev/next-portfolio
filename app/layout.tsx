@@ -3,8 +3,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import StarsCanvas from "@/components/main/StarBackground";
 import Navbar from "@/components/main/Navbar";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "@/components/ui/toaster";
+import Footer from "@/components/main/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,7 +31,7 @@ export default function RootLayout({
         {children}
         <Toaster />
         <Analytics />
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

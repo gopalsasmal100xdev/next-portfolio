@@ -39,7 +39,7 @@ export const titles = [
   "Frontend Development",
   "Backend Development",
   "MERN Stack Development",
-  "Open Source Contribution",
+  "Open Source Contributions",
 ];
 
 export interface Skill {
