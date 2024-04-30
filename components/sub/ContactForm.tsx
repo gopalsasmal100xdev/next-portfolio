@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { contact_desc } from "@/constants";
 import { useToast } from "../ui/use-toast";
@@ -8,6 +8,7 @@ import { ToastAction } from "../ui/toast";
 export default function ContactForm() {
   const [fullname, setFullname] = useState<string | null>(null);
   const [email, setEmail] = useState<string | null>(null);
+  const [userIp, setUserIp] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const { toast } = useToast();
@@ -19,7 +20,7 @@ export default function ContactForm() {
     try {
       await fetch("/api/send", {
         method: "POST",
-        body: JSON.stringify({ fullname, email, message }),
+        body: JSON.stringify({ fullname, email, message, userIp }),
       });
       setLoading(false);
       setEmail("");
@@ -41,6 +42,17 @@ export default function ContactForm() {
 
     setLoading(false);
   }
+
+  useEffect(() => {
+    fetch("https://api.ipify.org?format=json")
+      .then((response) => response.json())
+      .then((data) => {
+        setUserIp(String(data.ip));
+      })
+      .catch((error) => {
+        console.error("Error fetching IP:", error);
+      });
+  }, []);
 
   return (
     <div className="w-full lg:w-5/6 2xl:w-3/4 mt-10 md:mt-16 mx-auto flex justify-between rounded-xl">
